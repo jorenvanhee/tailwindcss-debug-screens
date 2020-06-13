@@ -1,10 +1,16 @@
 {
   "name": "tailwindcss-debug-screens",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Tailwind CSS component that shows the currently active screen (responsive breakpoint).",
   "main": "index.js",
   "author": "Joren Van Hee",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorenvanhee/tailwindcss-debug-screens.git"
+  },
+  "homepage": "https://github.com/jorenvanhee/tailwindcss-debug-screens",
+  "bugs": "https://github.com/jorenvanhee/tailwindcss-debug-screens/issues",
   "peerDependencies": {
     "tailwindcss": "^1.0"
   }
