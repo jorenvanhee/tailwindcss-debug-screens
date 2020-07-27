@@ -85,3 +85,22 @@ module.exports = {
   ],
 }
 ```
+
+#### Ignoring Screens
+
+In some cases, like a custom screen media query, it can be helpful to ignore a specific screen. In that case
+add the screen name to the `ignore` configuration array.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    debugScreens: {
+      ignore: ["custom-screen-name"],
+    },
+  },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
+}
+```
