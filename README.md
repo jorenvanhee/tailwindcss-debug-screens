@@ -42,7 +42,7 @@ Make sure the class is only present during development. Here's an example of how
 <body class="{{ devMode ? 'debug-screens' : '' }}">
 ```
 
-### Custimization
+### Customization
 
 You can customize the position and styles in the `theme.debugScreens` section of your `tailwind.config.js` file.
 
