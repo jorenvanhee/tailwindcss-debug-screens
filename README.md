@@ -44,7 +44,25 @@ Make sure the class is only present during development. Here's an example of how
 
 ### Customization
 
-You can customize the position and styles in the `theme.debugScreens` section of your `tailwind.config.js` file.
+You can customize this plugin in the `theme.debugScreens` section of your `tailwind.config.js` file.
+
+#### Ignore screens
+
+To ignore a specific screen (for instance if you use [dark mode](https://tailwindcss.com/docs/breakpoints/#dark-mode)), add the screen name to the `ignore` configuration array.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    debugScreens: {
+      ignore: ['dark'],
+    },
+  },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
+}
+```
 
 #### Position
 
@@ -78,25 +96,6 @@ module.exports = {
         color: 'black',
         // ...
       },
-    },
-  },
-  plugins: [
-    require('tailwindcss-debug-screens'),
-  ],
-}
-```
-
-#### Ignoring Screens
-
-In some cases, like a custom screen media query, it can be helpful to ignore a specific screen. In that case
-add the screen name to the `ignore` configuration array.
-
-```js
-// tailwind.config.js
-module.exports = {
-  theme: {
-    debugScreens: {
-      ignore: ["custom-screen-name"],
     },
   },
   plugins: [
