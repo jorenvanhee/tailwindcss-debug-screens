@@ -42,9 +42,27 @@ Make sure the class is only present during development. Here's an example of how
 <body class="{{ devMode ? 'debug-screens' : '' }}">
 ```
 
-### Custimization
+### Customization
 
-You can customize the position and styles in the `theme.debugScreens` section of your `tailwind.config.js` file.
+You can customize this plugin in the `theme.debugScreens` section of your `tailwind.config.js` file.
+
+#### Ignore screens
+
+To ignore a specific screen (for instance if you use [dark mode](https://tailwindcss.com/docs/breakpoints/#dark-mode)), add the screen name to the `ignore` configuration array.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    debugScreens: {
+      ignore: ['dark'],
+    },
+  },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
+}
+```
 
 #### Position
 
