@@ -27,6 +27,9 @@ module.exports = function ({ addComponents, theme }) {
 
   Object.entries(screens)
     .filter(([screen]) => !ignoredScreens.includes(screen))
+    .sort(([screenA, pixelA], [screenB, pixelB]) => {
+      return parseInt(pixelA) - parseInt(pixelB);
+    })
     .forEach(([screen]) => {
       components[`@screen ${screen}`] = {
         '.debug-screens::before': {
