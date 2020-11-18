@@ -8,6 +8,8 @@ module.exports = function ({ addComponents, theme }) {
   const positionY = position[0] || defaultPosition[0];
   const positionX = position[1] || defaultPosition[1];
 
+  const indicatorPrefix = theme('debugScreens.indicatorPrefix', 'screens: ');
+
   const components = {
     '.debug-screens::before': Object.assign({
       position: 'fixed',
@@ -21,7 +23,7 @@ module.exports = function ({ addComponents, theme }) {
       backgroundColor: '#000',
       color: '#fff',
       boxShadow: '0 0 0 1px #fff',
-      content: `'screen: _'`,
+      content: `'${indicatorPrefix}_'`,
     }, userStyles),
   };
 
@@ -30,7 +32,7 @@ module.exports = function ({ addComponents, theme }) {
     .forEach(([screen]) => {
       components[`@screen ${screen}`] = {
         '.debug-screens::before': {
-          content: `'screen: ${screen}'`,
+          content: `'${indicatorPrefix}${screen}'`,
         },
       };
     });

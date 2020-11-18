@@ -103,3 +103,21 @@ module.exports = {
   ],
 }
 ```
+
+#### Screen Prefix
+
+To modify the prefix for the screens, add the `indicatorPrefix` configuration.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    debugScreens: {
+      indicatorPrefix: 'screen: ',
+    },
+  },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
+}
+```
