@@ -103,3 +103,21 @@ module.exports = {
   ],
 }
 ```
+
+#### Prefix
+
+Modify the debug label prefix with the `prefix` configuration option.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    debugScreens: {
+      prefix: 'screen: ',
+    },
+  },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+  ],
+}
+```
