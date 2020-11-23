@@ -48,7 +48,7 @@ You can customize this plugin in the `theme.debugScreens` section of your `tailw
 
 #### Ignore screens
 
-To ignore a specific screen (for instance if you use [dark mode](https://tailwindcss.com/docs/breakpoints/#dark-mode)), add the screen name to the `ignore` configuration array.
+To ignore a specific screen (for instance [dark mode](https://tailwindcss.com/docs/dark-mode)), add the screen name to the `ignore` configuration array. `dark` is ignored by default.
 
 ```js
 // tailwind.config.js

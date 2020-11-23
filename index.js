@@ -1,7 +1,7 @@
 module.exports = function ({ addComponents, theme }) {
   const screens = theme('screens');
   const userStyles = theme('debugScreens.style', {});
-  const ignoredScreens = theme('debugScreens.ignore', [])
+  const ignoredScreens = theme('debugScreens.ignore', ['dark']);
   const prefix = theme('debugScreens.prefix', 'screen: ');
 
   const defaultPosition = ['bottom', 'left'];
