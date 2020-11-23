@@ -2,13 +2,12 @@ module.exports = function ({ addComponents, theme }) {
   const screens = theme('screens');
   const userStyles = theme('debugScreens.style', {});
   const ignoredScreens = theme('debugScreens.ignore', [])
+  const prefix = theme('debugScreens.prefix', 'screen: ');
 
   const defaultPosition = ['bottom', 'left'];
   const position = theme('debugScreens.position', defaultPosition);
   const positionY = position[0] || defaultPosition[0];
   const positionX = position[1] || defaultPosition[1];
-
-  const indicatorPrefix = theme('debugScreens.indicatorPrefix', 'screens: ');
 
   const components = {
     '.debug-screens::before': Object.assign({
@@ -23,7 +22,7 @@ module.exports = function ({ addComponents, theme }) {
       backgroundColor: '#000',
       color: '#fff',
       boxShadow: '0 0 0 1px #fff',
-      content: `'${indicatorPrefix}_'`,
+      content: `'${prefix}_'`,
     }, userStyles),
   };
 
@@ -32,7 +31,7 @@ module.exports = function ({ addComponents, theme }) {
     .forEach(([screen]) => {
       components[`@screen ${screen}`] = {
         '.debug-screens::before': {
-          content: `'${indicatorPrefix}${screen}'`,
+          content: `'${prefix}${screen}'`,
         },
       };
     });
