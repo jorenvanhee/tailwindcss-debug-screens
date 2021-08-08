@@ -9,8 +9,10 @@ module.exports = function ({ addComponents, theme }) {
   const positionY = position[0] || defaultPosition[0];
   const positionX = position[1] || defaultPosition[1];
 
+  const selector = theme('debugScreens.selector', '.debug-screens::before');
+
   const components = {
-    '.debug-screens::before': Object.assign({
+    [selector]: Object.assign({
       position: 'fixed',
       zIndex: '2147483647',
       [positionY]: '0',
@@ -30,7 +32,7 @@ module.exports = function ({ addComponents, theme }) {
     .filter(([screen]) => !ignoredScreens.includes(screen))
     .forEach(([screen]) => {
       components[`@screen ${screen}`] = {
-        '.debug-screens::before': {
+        [selector]: {
           content: `'${prefix}${screen}'`,
         },
       };
