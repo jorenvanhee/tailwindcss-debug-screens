@@ -124,14 +124,14 @@ module.exports = {
 
 #### Selector
 
-Modify the debug label parent element with the `selector` configuration option.
+Modify the debug element selector with the `selector` configuration option.
 
 ```js
 // tailwind.config.js
 module.exports = {
   theme: {
     debugScreens: {
-      selector: '[data-debugger::before]',
+      selector: '.debug-screens',
     },
   },
   plugins: [
