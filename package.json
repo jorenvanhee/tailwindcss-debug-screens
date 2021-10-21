@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-debug-screens",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A Tailwind CSS component that shows the currently active screen (responsive breakpoint).",
   "main": "index.js",
   "author": "Joren Van Hee",
