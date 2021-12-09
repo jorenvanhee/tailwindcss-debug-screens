@@ -12,6 +12,6 @@
   "homepage": "https://github.com/jorenvanhee/tailwindcss-debug-screens",
   "bugs": "https://github.com/jorenvanhee/tailwindcss-debug-screens/issues",
   "peerDependencies": {
-    "tailwindcss": "^1.0 || ^2.0 || ^3.0.0-alpha.1"
+    "tailwindcss": "^1.0 || ^2.0 || ^3.0.0-alpha.1 || ^3.0"
   }
 }
