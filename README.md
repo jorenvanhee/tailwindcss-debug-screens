@@ -28,25 +28,31 @@ module.exports = {
 }
 ```
 
-## Usage
-
-Add the class `debug-screens` to your `<body>` tag.
+3. Add the class `debug-screens` to your `<body>` tag:
 
 ```html
 <body class="debug-screens">
 ```
 
-Make sure the class is only present during development. Here's an example of how you could do that in Craft CMS:
+### Disable in production
+
+#### Laravel
+
+```twig
+<body class="{{ app()->isLocal() ? 'debug-screens' : '' }}">
+```
+
+#### Craft CMS
 
 ```twig
 <body class="{{ devMode ? 'debug-screens' : '' }}">
 ```
 
-### Customization
+## Customization
 
 You can customize this plugin in the `theme.debugScreens` section of your `tailwind.config.js` file.
 
-#### Ignore screens
+### Ignore screens
 
 To ignore a specific screen (for instance [dark mode](https://tailwindcss.com/docs/dark-mode)), add the screen name to the `ignore` configuration array. `dark` is ignored by default.
 
@@ -64,7 +70,7 @@ module.exports = {
 }
 ```
 
-#### Position
+### Position
 
 The first item of the position configuration array can be `top` or `bottom`, the second item can be `left` or `right`.
 
@@ -82,7 +88,7 @@ module.exports = {
 }
 ```
 
-#### Styles
+### Styles
 
 Take a look at the [index.js](index.js) file to see all the default styles.
 
@@ -104,7 +110,7 @@ module.exports = {
 }
 ```
 
-#### Prefix
+### Prefix
 
 Modify the debug label prefix with the `prefix` configuration option.
 
@@ -122,7 +128,7 @@ module.exports = {
 }
 ```
 
-#### Selector
+### Selector
 
 Modify the debug element selector with the `selector` configuration option.
 
