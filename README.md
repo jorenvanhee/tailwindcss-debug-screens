@@ -13,7 +13,7 @@ Requires **Tailwind v1.0** or higher.
 1. Install the plugin:
 
 ```bash
-npm install tailwindcss-debug-screens --save-dev
+npm install tailwindcss-debug-screens@2 --save-dev
 ```
 
 2. Add it to your `tailwind.config.js` file:
