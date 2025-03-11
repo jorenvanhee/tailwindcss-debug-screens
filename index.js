@@ -13,11 +13,7 @@ module.exports = plugin.withOptions(
        */
       const allScreens = theme('screens') || {};
       const enabledScreenNames = Object.keys(allScreens['__CSS_VALUES__'] || {});
-      const screens = Object.fromEntries(
-        Object.entries(allScreens).filter(
-          ([name, _size]) => enabledScreenNames.includes(name)
-        )
-      );
+      const screens = Object.fromEntries(enabledScreenNames.map((name) => [name, allScreens[name]]));
 
       const positions = position.split(',').map(position => position.trim());
       const positionY = ['top', 'bottom'].includes(positions[0]) ? positions[0] : 'bottom';
