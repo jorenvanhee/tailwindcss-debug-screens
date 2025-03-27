@@ -58,3 +58,23 @@ You can customize this plugin by using the following options when registering th
   prefix: 'screen: ';
 }
 ```
+
+### Custom Breakpoints
+
+When defining custom breakpoints, it can affect their order resulting in the component displaying an incorrect value or not updating on resize.
+
+To ensure breakpoints are received in the user-defined order, it may be necessary to add `breakpoint-*: initial` in your breakpoint definitions. This
+is also recommended in the [official Tailwind documentation](https://tailwindcss.com/docs/responsive-design#removing-default-breakpoints).
+
+```css
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+}
+```
